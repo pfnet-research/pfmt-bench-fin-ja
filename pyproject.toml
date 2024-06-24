@@ -1,0 +1,66 @@
+[tool.poetry]
+name = "pfmt-bench"
+version = "0.1.0"
+description = ""
+authors = ["Masanori Hirano"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+fschat = {git = "https://github.com/lm-sys/FastChat.git", rev = "9a9a6efa051b44a1ad263cb7622e1eddcb40707e", extras = ["model_worker", "webui"]}
+ray = "^2.23.0"
+torch = "^2.3.0"
+openai = "^1.31.0"
+anthropic = "^0.28.0"
+einops = "^0.8.0"
+transformers-stream-generator = "^0.0.5"
+python-dotenv = "^1.0.1"
+tabulate = "^0.9.0"
+fasttext-langdetect = "^1.0.5"
+plotly = "^5.22.0"
+kaleido = "0.2.1"
+
+
+[tool.poetry.group.dev.dependencies]
+black = "^24.4.2"
+isort = "^5.13.2"
+mypy = "^1.10.0"
+flake8 = "6.1.0"
+pyproject-flake8 = "6.1.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.isort]
+profile = 'black'
+force_single_line = true
+skip = [
+    ".git",
+    "__pycache__",
+    "docs",
+    "build",
+    "dist",
+    "examples",
+    ".venv"
+]
+
+[tool.mypy]
+disallow_untyped_defs = true
+ignore_missing_imports = true
+
+[tool.flake8]
+ignore = "E203,E231,E501,W503"
+max-line-length = 88
+exclude = [
+    ".git",
+    "__pycache__",
+    "docs",
+    "build",
+    "dist",
+    "examples",
+    ".venv",
+    "__init__.py"
+    ]
+select = "B,B950,C,E,F,W"

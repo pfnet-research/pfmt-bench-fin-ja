@@ -1,0 +1,4 @@
+*.jsonl
+!claude-*
+!gpt-*
+!.gitignore
