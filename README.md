@@ -48,7 +48,7 @@ for calculating the results of each task on each turn.
 # Citation
 TBD.
 ```
-@misc{Hirano2024-pfmt
+@misc{Hirano2024-pfmt,
     title={{pfmt-bench-fin-ja: Preferred Multi-turn Benchmark for Finance in Japanese}},
     author={Masanori Hirano and Kentaro Imajo},
     year={2024},
