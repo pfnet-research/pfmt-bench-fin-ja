@@ -1,4 +1,5 @@
 *.jsonl
 !claude-*
 !gpt-*
+!nvidia_*
 !.gitignore

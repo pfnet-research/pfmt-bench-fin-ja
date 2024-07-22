@@ -2,4 +2,5 @@
 old
 !claude-*
 !gpt-*
+!nvidia_*
 !.gitignore
