@@ -152,7 +152,7 @@ if __name__ == "__main__":
     if args.answer_file:
         answer_file = args.answer_file
     else:
-        answer_file = f"data/{args.bench_name}/model_answer/{args.model.replace('/',"_")}.jsonl"
+        answer_file = f"data/{args.bench_name}/model_answer/{args.model.replace('/','_')}.jsonl"
     print(f"Output to {answer_file}")
 
     questions = drop_questions_already_processed_by_question_id(questions, answer_file)

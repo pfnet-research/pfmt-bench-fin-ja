@@ -3,3 +3,4 @@
 !gpt-*
 !nvidia_*
 !.gitignore
+!plamo*
