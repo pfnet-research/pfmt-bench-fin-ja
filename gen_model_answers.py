@@ -282,13 +282,10 @@ if __name__ == "__main__":
         help="How many completion choices to generate.",
     )
     parser.add_argument(
-        "--num-gpus-per-model",
+        "--num-gpus",
         type=int,
         default=1,
-        help="The number of GPUs per model.",
-    )
-    parser.add_argument(
-        "--num-gpus-total", type=int, default=1, help="The total number of GPUs."
+        help="The number of GPUs to use.",
     )
     parser.add_argument(
         "--max-gpu-memory",
@@ -318,10 +315,8 @@ if __name__ == "__main__":
     if args.model_id is None:
         args.model_id = args.model_path.replace("/", "_")
 
-    if args.num_gpus_total // args.num_gpus_per_model > 1:
-        import ray
-
-        ray.init()
+    args.num_gpus_total = args.num_gpus
+    args.num_gpus_per_model = args.num_gpus
 
     question_file = f"data/{args.bench_name}/question.jsonl"
     if args.answer_file:
