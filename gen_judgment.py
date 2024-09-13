@@ -346,7 +346,7 @@ if __name__ == "__main__":
         default="data/judge_prompts.jsonl",
         help="The file of judge prompts.",
     )
-    parser.add_argument("--judge-model", type=str, default="gpt-4o")
+    parser.add_argument("--judge-model", type=str, default="gpt-4o-mini")
     parser.add_argument("--baseline-model", type=str, default="gpt-35-turbo")
     parser.add_argument(
         "--mode",

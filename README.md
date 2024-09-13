@@ -1,5 +1,7 @@
 # pfmt-bench-fin-ja: Preferred Multi-turn Benchmark for Finance in Japanese
 
+Note: model judgments are changed from gpt-4o to gpt-4o-mini since September 2024. (Because of cost issue)
+
 This is a benchmark measuring the generation quality of LLMs for financial conversations in Japanese. The benchmark consists of 360 dialogues, each containing 2 turns. There are 12 types of tasks, writing, roleplay, knowledge, extraction, reasoning, math, coding, idea, translation, ethics, trustworthiness, and ESGs.
 This benchmark aims to evaluate the generation quality of LLMs in financial conversations in Japanese.
 
@@ -7,7 +9,7 @@ Originally, [MT-bench](https://github.com/lm-sys/FastChat/tree/main/fastchat/llm
 Instead of STEM and humanities tasks, we added knowledge task for financial conversations.
 In addition, we also newly employed idea, translation, ethics, trustworthiness, and ESGs tasks.
 
-The evaluation is carried out with a 10-grade scale, and the evaluation is done by gpt-4o.
+The evaluation is carried out with a 10-grade scale, and the evaluation is done by gpt-4o-mini.
 
 <img src="top_image.png" width="80%"></img>
 
@@ -26,7 +28,7 @@ For `gen_model_answers.py`, you can set `----disable-strict-injection-check` to 
 The strict injection check is a function that checks whether the model's answer contains the generated next questions and answers, which could be a problem when the model outputs are evaluated in the next step.
 If you do not use this option (default), the output contains the special marker for Q&A, such as `###ユーザー` and `###アシスタント`, will be removed.
 
-3. generate judgments using gpt-4o:
+3. generate judgments using gpt-4o-mini:
 ```
 # highly recommeded to evaluate model using single mode
 python gen_judgment.py [--model-list gpt-35-turbo rinna/nekomata-7b-instruction] --mode single --parallel 10

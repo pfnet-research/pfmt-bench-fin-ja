@@ -57,7 +57,7 @@ if __name__ == "__main__":
         nargs="+",
         default=None,
     )
-    parser.add_argument("--judge-model", type=str, default="gpt-4o")
+    parser.add_argument("--judge-model", type=str, default="gpt-4o-mini")
     args = parser.parse_args()
 
     make_leaderboard(args)

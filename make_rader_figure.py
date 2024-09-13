@@ -82,7 +82,7 @@ if __name__ == "__main__":
         default=None,
         help="A list of models to be evaluated",
     )
-    parser.add_argument("--judge-model", type=str, default="gpt-4o")
+    parser.add_argument("--judge-model", type=str, default="gpt-4o-mini")
     args = parser.parse_args()
 
     make_leaderboard(args)

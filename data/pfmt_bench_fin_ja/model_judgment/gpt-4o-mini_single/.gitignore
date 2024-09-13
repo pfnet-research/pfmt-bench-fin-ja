@@ -1,0 +1,7 @@
+*.jsonl
+old
+!claude-*
+!gpt-*
+!nvidia_*
+!.gitignore
+!plamo-1.0*
