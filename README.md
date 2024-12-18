@@ -48,7 +48,15 @@ python show_result.py
 for calculating the results of each task on each turn.
 
 # Citation
-TBD.
+```
+@misc{Hirano2024-pfmt-jxiv,
+    title={{金融分野に特化した複数ターン日本語生成ベンチマークの構築}},
+    author={平野, 正徳 and 今城, 健太郎},
+    year={2024},
+    doi={10.51094/jxiv.1000},
+    url = {https://jxiv.jst.go.jp/index.php/jxiv/preprint/view/1000}
+}
+```
 ```
 @misc{Hirano2024-pfmt,
     title={{pfmt-bench-fin-ja: Preferred Multi-turn Benchmark for Finance in Japanese}},
